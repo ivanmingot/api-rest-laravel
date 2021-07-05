@@ -7,6 +7,7 @@ YOU CAN SEE THE PROJECT ONLINE AT http://webnub.org/
 3. MIGRATE DE TABLES - php artisan migrate
 4. SEED - php artisan db:seed
 5. GO TO https://github.com/ivanmingot/blog-angular TO CLONE THE FRONT-END
+6. Set the url variable in 'services / global.ts' with the url of the back end
 
 You can do some test. To do this is better to create a new DDBB for testing.
 
