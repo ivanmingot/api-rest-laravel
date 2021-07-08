@@ -34,11 +34,9 @@ Route::post('/api/update', [UserController::class, 'update']);
 Route::post('/api/post/', [PostController::class, 'index']);
 Route::get('/api/post/{id}', [PostController::class, 'show']);
 Route::post('/api/post/store', [PostController::class, 'store']);
-Route::post('api/post/upload', [PostController::class, 'upload']);
+Route::post('/api/post/upload', [PostController::class, 'upload']);
 Route::get('/api/post/image/{filename}', [PostController::class, 'getImage']);
 Route::post('/api/post/dates/', [PostController::class, 'getPostsByDates']);
 Route::get('/api/post/myposts/{id}', [PostController::class, 'getMyPosts']);
-
-
 
 

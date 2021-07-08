@@ -42,7 +42,7 @@ class autoLoad extends Command
     public function handle()
     {
         //bring the posts from the rest api
-		$url = 'https://sq1-api-test.herokuapp.com/posts';
+		$url = env('URL_API');
 		
 		$response = Http::get($url)->json();
 		
@@ -50,6 +50,7 @@ class autoLoad extends Command
 		if(!empty($response)){
 			
 			//save the post in ddbb
+
 			$new_posts = $response['data'];
 			
 			foreach($new_posts as $posts){

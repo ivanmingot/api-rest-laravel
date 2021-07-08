@@ -18,14 +18,9 @@ class UserSeeder extends Seeder
         $user->name = 'admin';
 		$user->role = 'ROLE_ADMIN';
         $user->email = 'admin@example.com';
-        $user->password = bcrypt('123456');
+        $user->password = hash('sha256', 123456);
 	    $user->save();
 		
-		$user = new User();
-        $user->name = 'user1';
-		$user->role = 'ROLE_USER';
-        $user->email = 'user@example.com';
-        $user->password = bcrypt('123456');
-	    $user->save();
+		
     }
 }

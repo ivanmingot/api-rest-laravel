@@ -67,7 +67,7 @@ class PostController extends Controller
 		return response()->json($data, $data['code']);
 	}
 	public function store(Request $request){
-		
+	
 		$json = $request->input('json', null);
 		$params = json_decode($json); //Object
 		$params_array = json_decode($json, true);//Array
@@ -106,7 +106,7 @@ class PostController extends Controller
 				'code' => 200,
 				'status' => 'success',
 				'message' => 'Post saved successfully',
-				'post' =>$post
+				'post' =>$params_array
 				];
 			}
 		}else{

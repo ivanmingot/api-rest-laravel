@@ -11,7 +11,7 @@ class UserController extends Controller
 		
 		//collecting user data
 		
-		$json = $request->input('json',null);
+		$json = $request->input('json', null);
 		$params = json_decode($json);
 		$params_array = json_decode($json, true);
 	
@@ -26,8 +26,6 @@ class UserController extends Controller
 				'name' => 'required',
 				'password' => 'required'
 			]);
-			
-			
 			
 			if($validate->fails()){
 				$data = array(
@@ -70,11 +68,14 @@ class UserController extends Controller
 			
 		}
 		return response()->json($data);
+		
+		
 	}
 	
 	public function login(Request $request){
 		
 		$jwtAuth = new \JwtAuth();
+		
 		
 		$json = $request->input('json',null);
 		$params = json_decode($json);
@@ -120,4 +121,6 @@ class UserController extends Controller
 		die();
 		
 	}
+	
+
 }

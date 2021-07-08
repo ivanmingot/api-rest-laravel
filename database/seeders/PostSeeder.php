@@ -23,7 +23,7 @@ class PostSeeder extends Seeder
 		$post->save();
 		
 		$post = new Post();
-        $post->user_id = 2;
+        $post->user_id = 1;
         $post->title = 'jellyfish';
         $post->description = 'Cnidarians are marine animals which include jellyfish and other stinging
 		organisms. They are equipped with very specialized cells called cnidocytes, mainly concentrated along their tentacles, which are able to inject a
