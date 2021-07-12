@@ -42,7 +42,7 @@ class autoLoad extends Command
     public function handle()
     {
         //bring the posts from the rest api
-		$url = env('URL_API');
+		$url = config('app.url_api');
 		
 		$response = Http::get($url)->json();
 		

@@ -55,6 +55,7 @@ return [
     'url' => env('APP_URL', 'http://localhost'),
 
     'asset_url' => env('ASSET_URL', null),
+    'url_api' =>env('URL_API', 'https://sq1-api-test.herokuapp.com/posts'),
 
     /*
     |--------------------------------------------------------------------------
